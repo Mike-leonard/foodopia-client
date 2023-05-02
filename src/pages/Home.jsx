@@ -1,9 +1,12 @@
 import React from 'react';
+import Carousel from '../components/Carousel';
+import FoodMeu from '../components/FoodMeu';
 
 const Home = () => {
     return (
         <div>
-            This is the Home component
+            <Carousel></Carousel>
+            <FoodMeu></FoodMeu>
         </div>
     );
 };
