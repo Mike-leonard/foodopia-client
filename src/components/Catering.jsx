@@ -9,6 +9,7 @@ const Catering = () => {
 
 
             <div className="md:absolute top-0 right-0 bottom-0 left-0 m-auto  rounded-lg text-[#000000] text-center leading-relaxed">
+                {/* TODO:Need to use use image here */}
                 <h4 className="text-4xl my-4">Catering</h4>
                 <p className="text-[#aa218f]">
                     Please call at 24 hours in advance for catering orders

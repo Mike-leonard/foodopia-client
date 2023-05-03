@@ -11,10 +11,11 @@ const OurTeam = () => {
     },[])
     return (
         <div className="m-1">
+            {/* TODO: Need to use iamgge here */}
             <h4 className="text-4xl text-center">Our Team</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mb-4 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 my-4 justify-center">
                 {
-                    chefList.map(chef => <SingleCardTeam chef={chef}></SingleCardTeam>)
+                    chefList.map(chef => <SingleCardTeam chef={chef} key={chef.id}></SingleCardTeam>)
                 }
             
             </div>

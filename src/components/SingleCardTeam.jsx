@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const SingleCardTeam = ({ chef }) => {
+    const navigate = useNavigate()
+
+    const goToViewDetails = id => {
+        navigate(`/chef/${id}`)
+        console.log(id)
+    }
 
     const { id, name, chefPhoto, likes, numberOfRecipes, yearOfExperiences } = chef
     return (
@@ -17,7 +25,7 @@ const SingleCardTeam = ({ chef }) => {
                     {likes}
                 </p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary text-xs">View Recipes</button>
+                    <button onClick={() => goToViewDetails(id)} className="btn btn-primary text-xs">View Recipes</button>
                 </div>
             </div>
         </div>
