@@ -5,7 +5,6 @@ import RecipeDetails from '../components/RecipeDetails';
 const ViewRecipes = () => {
 
     const chef = useLoaderData();
-    console.log(chef)
     const { id, name, chefPhoto, likes, numberOfRecipes, shortBio, yearOfExperiences } = chef
 
     return (

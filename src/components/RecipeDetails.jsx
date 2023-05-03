@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import TableRow from './TableRow';
 
-const RecipeDetails = ({chef}) => {
-   // console.log(chef)
+const RecipeDetails = ({ chef }) => {
+    // console.log(chef)
 
     const [recipes, setRecipes] = useState([])
 
     useEffect(() => {
         fetch(`http://localhost:3000/recipe/${chef.id}`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setRecipes(data))
     }, [])
 
     return (
@@ -25,27 +26,31 @@ const RecipeDetails = ({chef}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* row 1 */}
+
+                    {
+                        recipes.map(recipe => <TableRow recipe={recipe} key={recipe.id}></TableRow>)
+                    }
+{/* 
                     <tr>
                         <th>1</th>
                         <td>Cy Ganderton</td>
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                     </tr>
-                    {/* row 2 */}
+
                     <tr>
                         <th>2</th>
                         <td>Hart Hagerty</td>
                         <td>Desktop Support Technician</td>
                         <td>Purple</td>
                     </tr>
-                    {/* row 3 */}
+
                     <tr>
                         <th>3</th>
                         <td>Brice Swyre</td>
                         <td>Tax Accountant</td>
                         <td>Red</td>
-                    </tr>
+                    </tr> */}
                 </tbody>
             </table>
         </div>
