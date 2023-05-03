@@ -2,12 +2,12 @@ import React from 'react';
 import menuImg from '../assets/food-knife.png'
 const FoodMeu = () => {
     return (
-        <div className="my-1">
+        <div className="m-1">
             <div  className="flex justify-center">
                 <img src={menuImg} className="w-20 -mb-5" alt="" />
             </div>
             <h4 className='text-4xl text-center mb-5'>Our Menu</h4>
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center md:items-stretch">
                 <div className="card w-96 glass">
                     <figure  className="h-52"><img className="w-96" src="https://static.toiimg.com/thumb/53110049.cms?width=1200&height=900" alt="car!" /></figure>
                     <div className="card-body">
