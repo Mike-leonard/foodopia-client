@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import ActiveLink from '../ActiveLink';
 
 const Header = () => {
 
@@ -35,8 +36,8 @@ const Header = () => {
                     <ul className={`menu ${isMobile ?
                         "menu-compact dropdown-content shadow bg-base-100 rounded-box w-52" :
                         "w-auto flex flex-row space-x-4 rounded-box"}`}>
-                        <li><a href="/" className="block md:inline-block">Home</a></li>
-                        <li><a href="/blogs" className="block md:inline-block">Blogs</a></li>
+                        <li><ActiveLink to="/" className="block md:inline-block">Home</ActiveLink></li>
+                        <li><ActiveLink to="/blogs" className="block md:inline-block">Blogs</ActiveLink></li> 
                     </ul>
                 </div>
             </div>
