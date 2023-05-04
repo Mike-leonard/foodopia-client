@@ -1,5 +1,5 @@
 import React from 'react';
-
+import menuImg from '../assets/cater.png'
 const Catering = () => {
     return (
         <div className="relative m-1">
@@ -7,9 +7,10 @@ const Catering = () => {
                 <img src="https://shaguncatering.com/wp-content/uploads/2020/12/asiya-kiev-SiwrpBnxDww-unsplash-3.jpg" alt="" className='w-full h-full rounded-md opacity-25' />
             </div>
 
-
             <div className="md:absolute top-0 right-0 bottom-0 left-0 m-auto  rounded-lg text-[#000000] text-center leading-relaxed">
-                {/* TODO:Need to use use image here */}
+                <div className="flex justify-center my-5">
+                    <img src={menuImg} className="w-20 -mb-5" alt="" />
+                </div>
                 <h4 className="text-4xl my-4">Catering</h4>
                 <p className="text-[#aa218f]">
                     Please call at 24 hours in advance for catering orders
