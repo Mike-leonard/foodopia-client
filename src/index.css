@@ -5,7 +5,7 @@
 .view-recipes-container {
     background-image: url("https://img.freepik.com/free-vector/background-template-design-with-happy-chef-smiling_1308-43129.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: left top;
     opacity: 0.9;
 }

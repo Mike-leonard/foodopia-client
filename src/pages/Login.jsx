@@ -75,7 +75,6 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
-                    {/* TODO: Error message need to show */}
                     <span className="text-center mb-3 -mt-4">New to Foodopia? <Link to="/register" className="text-red-600">Register</Link></span>
                 </div>
                 <div className="flex gap-4">

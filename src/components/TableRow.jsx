@@ -7,8 +7,6 @@ const TableRow = ({ recipe }) => {
     const { id, recipeName, rating, cookingMethod, ingredients } = recipe
 
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-
-    /* TODO: show a toast */
     const handleFavrtClick = (id, event) => {
         setIsButtonDisabled(true)
         toast.success('Recipe Added to Your Favorites')

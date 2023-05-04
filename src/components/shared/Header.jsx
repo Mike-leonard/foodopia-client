@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import ActiveLink from '../ActiveLink';
 
+
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext)
     const [isMobile, setIsMobile] = useState(false)
+
+ 
 
     const handleLogOut = () => {
         logOut()
@@ -22,10 +25,8 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-300">
             <div className="navbar-start">
-                {/* TODO: need to show active route */}
-
                 <div className="dropdown md:flex">
                     <label tabIndex={0} className="btn btn-ghost btn-circle md:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,6 +69,8 @@ const Header = () => {
                         </button>
                 }
             </div>
+
+           
         </div>
     );
 };
