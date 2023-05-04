@@ -7,7 +7,7 @@ const RecipeDetails = ({ chef }) => {
     const [recipes, setRecipes] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:3000/recipe/${chef.id}`)
+        fetch(`https://foodopia-server.vercel.app/recipe/${chef.id}`)
             .then(res => res.json())
             .then(data => setRecipes(data))
     }, [])
@@ -30,7 +30,7 @@ const RecipeDetails = ({ chef }) => {
                     {
                         recipes.map(recipe => <TableRow recipe={recipe} key={recipe.id}></TableRow>)
                     }
-{/* 
+                    {/* 
                     <tr>
                         <th>1</th>
                         <td>Cy Ganderton</td>

@@ -5,6 +5,8 @@ import Home from '../../pages/Home';
 import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import ViewRecipes from '../../pages/ViewRecipes';
+import Blogs from '../../pages/Blogs';
+import ErrorPage from '../../pages/ErrorPage';
 
 const router = createBrowserRouter([
     {
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element:<Home></Home>
+                element: <Home></Home>
             },
             {
                 path: 'login',
@@ -26,7 +28,15 @@ const router = createBrowserRouter([
             {
                 path: 'chef/:id',
                 element: <ViewRecipes></ViewRecipes>,
-                loader: ({ params }) => fetch(`http://localhost:3000/chef/${params.id}`)
+                loader: ({ params }) => fetch(`https://foodopia-server.vercel.app/chef/${params.id}`)
+            },
+            {
+                path: 'blogs',
+                element: <Blogs></Blogs>
+            },
+            {
+                path: '*',
+                element: <ErrorPage></ErrorPage>
             }
         ]
     }

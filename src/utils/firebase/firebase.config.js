@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 /* TODO: need to pass it to env local */
 const firebaseConfig = {
-    apiKey: "AIzaSyCbTkoMSgZwLYlZyx56yZjyW7sES8oKZ_k",
-    authDomain: "foodopia-60b32.firebaseapp.com",
-    projectId: "foodopia-60b32",
-    storageBucket: "foodopia-60b32.appspot.com",
-    messagingSenderId: "385311651512",
-    appId: "1:385311651512:web:a3256baebb8fc2fa4a264d"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

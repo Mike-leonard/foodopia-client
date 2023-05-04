@@ -5,10 +5,10 @@ const OurTeam = () => {
 
     const [chefList, setChefList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3000/chef')
-        .then(res => res.json())
+        fetch('https://foodopia-server.vercel.app/chef')
+            .then(res => res.json())
             .then(data => setChefList(data))
-    },[])
+    }, [])
     return (
         <div className="m-1">
             {/* TODO: Need to use iamgge here */}
@@ -17,7 +17,7 @@ const OurTeam = () => {
                 {
                     chefList.map(chef => <SingleCardTeam chef={chef} key={chef.id}></SingleCardTeam>)
                 }
-            
+
             </div>
         </div>
     );
