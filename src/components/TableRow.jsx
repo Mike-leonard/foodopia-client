@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { toast } from 'react-toastify';
 
 const TableRow = ({ recipe }) => {
 
@@ -11,7 +12,8 @@ const TableRow = ({ recipe }) => {
 
     /* TODO: show a toast */
     const handleFavrtClick = (id, event) => {
-        setIsButtonDisabled(true);
+        setIsButtonDisabled(true)
+        toast.success('Recipe Added to Your Favorites')
     }
 
     return (

@@ -7,7 +7,6 @@ const SingleCardTeam = ({ chef }) => {
 
     const goToViewDetails = id => {
         navigate(`/chef/${id}`)
-        console.log(id)
     }
 
     const { id, name, chefPhoto, likes, numberOfRecipes, yearOfExperiences } = chef

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Register = () => {
 
@@ -15,13 +16,17 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        if (password.length < 6){
+            toast.error('Password should be 6 or more characters long')
+            return;
+        }
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
                 if (createdUser !== null) {
                     userProfileUpdate(createdUser, name, photo)
                         .then(() => {
-                            /* TODO: alert profile updated */
+                            form.reset()
                         })
                         .catch(err => console.log(err))
                 }
@@ -58,7 +63,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" placeholder="password" name="password" className="input input-bordered" required />
+                            <input type="password" placeholder="password" name="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

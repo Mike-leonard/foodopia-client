@@ -7,6 +7,7 @@ import Register from '../../pages/Register';
 import ViewRecipes from '../../pages/ViewRecipes';
 import Blogs from '../../pages/Blogs';
 import ErrorPage from '../../pages/ErrorPage';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'chef/:id',
-                element: <ViewRecipes></ViewRecipes>,
+                element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://foodopia-server.vercel.app/chef/${params.id}`)
             },
             {
