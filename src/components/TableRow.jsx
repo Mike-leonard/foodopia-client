@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const TableRow = ({ recipe }) => {
 
@@ -21,7 +23,12 @@ const TableRow = ({ recipe }) => {
             <td>
                 {cookingMethod.map((method, index) => <li key={index}>{method}</li>)}
             </td>
-            <td>{rating}</td>
+            <td>
+                {<Rating
+                    style={{ maxWidth: 150 }}
+                    value={Math.round(rating || 0)} readOnly />}
+                <span className='ms-2'> {rating}</span>
+            </td>
             <td>
                 <button onClick={(event) => handleFavrtClick(id, event)} disabled={isButtonDisabled} className="btn btn-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
