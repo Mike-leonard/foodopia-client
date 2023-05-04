@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import LazyLoad from 'react-lazy-load';
 
 const SingleCardTeam = ({ chef }) => {
     const navigate = useNavigate()
@@ -12,7 +12,9 @@ const SingleCardTeam = ({ chef }) => {
     const { id, name, chefPhoto, likes, numberOfRecipes, yearOfExperiences } = chef
     return (
         <div className="card card-side bg-base-100 shadow-xl">
-            <figure className="w-40"><img src={chefPhoto} alt="Movie" className='w-full max-w-md rounded-lg' /></figure>
+            <LazyLoad className="w-40">
+                <img src={chefPhoto} alt="Movie" className='w-full h-full max-w-md rounded-l-lg' />
+            </LazyLoad>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p className="text-sm">Year of Experiences: <span className="text-red-700">{yearOfExperiences}</span></p>

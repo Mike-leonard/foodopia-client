@@ -4,8 +4,6 @@ import '@smastrom/react-rating/style.css'
 import { toast } from 'react-toastify';
 
 const TableRow = ({ recipe }) => {
-
-    console.log(recipe)
     const { id, recipeName, rating, cookingMethod, ingredients } = recipe
 
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);

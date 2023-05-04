@@ -14,4 +14,4 @@
 * and more......
 
 ## Live Site
-[Visit GetHired Live Website](https://foodopia-60b32.web.app/)
+[Visit Foodopia Live Website](https://foodopia-60b32.web.app/)

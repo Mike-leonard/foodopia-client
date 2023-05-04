@@ -45,7 +45,7 @@ const Login = () => {
                 console.log(user)
                 navigate(from, { replace: true })
             })
-            .catch(error => console.log(error))
+            .catch(error => toast.error(error.message))
     }
 
     return (
