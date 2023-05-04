@@ -3,6 +3,10 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
+            <div className="flex justify-center items-center gap-6">
+                <h3 className="text-3xl"> Welcome to blog page</h3> 
+                <button className="btn btn-primary">To PDF</button>
+            </div>
             <div tabIndex={0} className="collapse collapse-open border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     Tell us the differences between uncontrolled and controlled components.

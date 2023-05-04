@@ -3,19 +3,15 @@
 **View Italian Food Recipe and chef 😁**
 
 ## Features
-* This is basic frontend job searching website
-* Navigation system work for all devices
-* Custom banner pages for routes
-* Dynamic data to set Job category List
-* Showing available jobs on featured job section
-* View details button redirect to job details page
-* Sell All Jobs button to show other stored jobs in json file
-* Statistics route showing a chart
-* Every job details page have dynamic route to show job description
-* Apply now button add this job to localStorage
-* Showing this Applied job on Applied job route
-* Applied job filtering on the basis of remote and onsite job
+* Foodopia is online recipe finder website
+* User Register and login system
+* on home page showing chef name
+* View recipe button redirects to chef profile page
+* Inside chef profile page we can see specific chef recipes
+* This route is protected that means without registration you cannot go this page
+* showing all recipe in tabular format
+* few validation while user register
 * and more......
 
 ## Live Site
-[Visit GetHired Live Website](https://golden-basbousa-6f92c5.netlify.app/)
+[Visit GetHired Live Website](https://foodopia-60b32.web.app/)

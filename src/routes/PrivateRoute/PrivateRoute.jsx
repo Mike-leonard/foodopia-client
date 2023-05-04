@@ -7,8 +7,8 @@ const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
-        /* TODO: spinner */
         return <progress className="progress w-56"></progress>
+
     }
 
     if (user) {
